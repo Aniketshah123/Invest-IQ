@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="flex items-center justify-between h-[80px]"
+        style=" background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);">
+        <div class=" flex header-logo item-center justify-center ml-3">
+            <h1 class="text-3xl font-bold text-[white]">INVEST IQ </h1> <i
+                class="fa-solid fa-magnifying-glass-chart text-3xl ml-1 mt-1.5 text-[white]"></i>
+        </div>
+        
+        <div class="profile flex flex-col items-center text-[white]">
+            <i class="fa-solid fa-user text-3xl text-[white] mr-3 cursor-pointer"></i>
+            <h1 class="profile text-xl mr-1.5">Profile</h1>
+        </div>
+    </nav>
+    <div class="main-page  p-3">
+
+        <div class="search-component border rounded w-[90%] max-w-lg flex items-center justify-between mb-10">
+            <input type="text" placeholder="Enter stock name here" class="flex-[1] focus:outline-[0] border-[none] p-3 ">
+            <button class="rounded-r-xs bg-yellow-500 p-3 cursor-pointer stock-info-btn" type="submit" title="stock-info-btn">
+                Search
+            </button>
+        </div>
+        <div class="search-result-container w-full flex flex-col items-center justify-center gap-[20px]">
+            <h1 class="text-2xl font-bold">Suggestions</h1>
+            <div class="stock-info border rounded p-4 w-[90%] max-w-lg flex flex-col items-start bg-gray-100">
+                <h2 class="stock-name text-2xl font-bold mb-2">Stock Name: <span class="text-blue-600">Apple Inc.</span></h2>
+                <p class="stock-price text-xl">Price: <span class="text-green-600">$150.00</span></p>
+            </div>
+            <div class="stock-info border rounded p-4 w-[90%] max-w-lg flex flex-col items-start bg-gray-100">
+                <h2 class="stock-name text-2xl font-bold mb-2">Stock Name: <span class="text-blue-600">Microsoft Corp.</span></h2>
+                <p class="stock-price text-xl">Price: <span class="text-green-600">$310.00</span></p>
+            </div>
+            <div class="stock-info border rounded p-4 w-[90%] max-w-lg flex flex-col items-start bg-gray-100">
+                <h2 class="stock-name text-2xl font-bold mb-2">Stock Name: <span class="text-blue-600">Tesla Inc.</span></h2>
+                <p class="stock-price text-xl">Price: <span class="text-green-600">$720.00</span></p>
+            </div>
+            <div class="stock-info border rounded p-4 w-[90%] max-w-lg flex flex-col items-start bg-gray-100">
+                <h2 class="stock-name text-2xl font-bold mb-2">Stock Name: <span class="text-blue-600">Amazon.com Inc.</span></h2>
+                <p class="stock-price text-xl">Price: <span class="text-green-600">$3,200.00</span></p>
+            </div>
+            <div class="stock-info border rounded p-4 w-[90%] max-w-lg flex flex-col items-start bg-gray-100">
+                <h2 class="stock-name text-2xl font-bold mb-2">Stock Name: <span class="text-blue-600">Google LLC</span></h2>
+                <p class="stock-price text-xl">Price: <span class="text-green-600">$2,850.00</span></p>
+            </div>
+            <div class="stock-info border rounded p-4 w-[90%] max-w-lg flex flex-col items-start bg-gray-100">
+                <h2 class="stock-name text-2xl font-bold mb-2">Stock Name: <span class="text-blue-600">Meta Platforms</span></h2>
+                <p class="stock-price text-xl">Price: <span class="text-green-600">$340.00</span></p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="api.js"></script>
+</body>
+
+</html>
