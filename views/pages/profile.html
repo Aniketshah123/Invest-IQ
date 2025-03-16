@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="./images/profile.png" alt="Profile Picture" class="profile-image">
+                <div class="profile-info">
+                    <h1 class="profile-name">vinay mohammad raqsuul</h1>
+                    <p class="profile-email">mohammad123@example.com</p>
+                    <p class="profile-member-since">Member since: January 2022</p>
+                </div>
+            </div>
+            <div class="wallet-section">
+                <h3 class="wallet-title">Wallet</h3>
+                <p class="wallet-balance">Balance: <span id="balance" class="balance-amount">$100</span></p>
+                <div class="wallet-actions">
+                    <input type="number" id="amount" placeholder="Enter amount" class="amount-input">
+                    <button onclick="addMoney()" class="add-money-button">Add</button>
+                    <button onclick="withdrawMoney()" class="withdraw-money-button">Withdraw</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h2 class="stat-title">Total Balance</h2>
+                <p id="balance" class="stat-amount green">$100</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="stat-title">Monthly Income</h2>
+                <p class="stat-amount blue">$4,500.00</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="stat-title">Monthly Expenses</h2>
+                <p class="stat-amount red">$3,200.00</p>
+            </div>
+        </div>
+
+        <!-- Recent Transactions Section -->
+        <div class="transactions-section">
+            <h2 class="transactions-title">Recent Transactions</h2>
+            <div class="transactions-list">
+                <div class="transaction-item">
+                    <div class="transaction-details">
+                        <h3 class="transaction-name">Groceries</h3>
+                        <p class="transaction-description">Supermarket</p>
+                    </div>
+                    <p class="transaction-amount red">-$150.00</p>
+                </div>
+                <div class="transaction-item">
+                    <div class="transaction-details">
+                        <h3 class="transaction-name">Salary</h3>
+                        <p class="transaction-description">Company Inc.</p>
+                    </div>
+                    <p class="transaction-amount green">+$4,500.00</p>
+                </div>
+                <div class="transaction-item">
+                    <div class="transaction-details">
+                        <h3 class="transaction-name">Utilities</h3>
+                        <p class="transaction-description">Electricity Bill</p>
+                    </div>
+                    <p class="transaction-amount red">-$120.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addMoney() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const balanceElement = document.getElementById('balance');
+            let balance = parseFloat(balanceElement.textContent.replace('$', ''));
+            balance += amount;
+            balanceElement.textContent = `$${balance.toFixed(2)}`;
+        }
+
+        function withdrawMoney() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const balanceElement = document.getElementById('balance');
+            let balance = parseFloat(balanceElement.textContent.replace('$', ''));
+            balance -= amount;
+            balanceElement.textContent = `$${balance.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
