@@ -6,6 +6,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../public/css/output.css" />
   </head>
+  <style>
+    
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .slider {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll 10s linear infinite;
+    }
+
+    .slider-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      display: flex;
+    }
+
+    
+    .slider .slide {
+      flex: 0 0 auto;
+      width: 200px; 
+      margin: 0 10px;
+    }
+  </style>
   <body>
     <!-- navbar -->
     <nav
@@ -129,6 +160,56 @@
           </button>
         </div>
       </div>
+    </div>
+    <!-- slider -->
+    <div class=" flex items-center justify-center ">
+        <div class="w-full max-w-4xl overflow-hidden">
+          <div class="slider-wrapper">
+            <div class="slider flex items-center">
+              <!-- Slide Items -->
+              <div class="slide  text-white p-4 rounded-lg text-center">
+                <img src="../../public/images/slider1.png" alt="" />
+              </div>
+              <div class="slide  text-white p-4 rounded-lg text-center">
+                <img src="../../public/images/slider2.png" alt="" />
+              </div>
+              <div class="slide  text-white p-4 rounded-lg text-center">
+                <img src="../../public/images/slider3.png" alt="" />
+              </div>
+              <div
+                class="slide  text-black p-4 rounded-lg text-center"
+              >
+                <img src="../../public/images/slider4.png" alt="" />
+              </div>
+              <div
+                class="slide  text-white p-4 rounded-lg text-center"
+              >
+                <img src="../../public/images/slider5.png" alt="" />
+              </div>
+    
+              <!-- Duplicate slides for seamless effect -->
+              <div class="slide text-white p-4 rounded-lg text-center">
+                <img src="../../public/images/slider1.png" alt="" />
+              </div>
+              <div class="slide  text-white p-4 rounded-lg text-center">
+                <img src="../../public/images/slider2.png" alt="" />
+              </div>
+              <div class="slide  text-white p-4 rounded-lg text-center">
+                <img src="../../public/images/slider3.png" alt="" />
+              </div>
+              <div
+                class="slide  text-black p-4 rounded-lg text-center"
+              >
+                <img src="../../public/images/slider4.png" alt="" />
+              </div>
+              <div
+                class="slide  text-white p-4 rounded-lg text-center"
+              >
+                <img src="../../public/images/slider5.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <!-- footer -->
     <footer
